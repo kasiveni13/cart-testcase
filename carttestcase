@@ -1,0 +1,165 @@
+
+
+Cart requirement:
+
+1. User can add maximum 10 items in the cart
+
+2. If cart is empty "Checkout" button should be disabled
+
+3. if cart reaches 10 items user gets popup message like "Cart is full"
+
+4. if cart is empty the page should display "Your cart is empty, add items
+
+   to checkout"
+
+5. Product can be added to cart with or without login
+
+6. At the time of checkout cart will ask for user to login if not logged in
+
+
+
+Flow:
+
+Home -> search -> product -> add to cart -> checkout -> Login ->payment
+
+Login -> search -> product ->add to cart -> checkout -> payment
+
+
+
+
+
+Test Case 1
+
+Test Case ID: TC001
+
+Test Scenario: Verify that user can add a product to cart without login.
+
+Precondition: User is on the Home page and not logged in.
+
+Test Steps:
+
+Search for a product.
+Select the product.
+Click Add to Cart.
+Open the Cart.
+
+Expected Result:
+Product should be added successfully to the cart.
+
+Test Case 2
+
+Test Case ID: TC002
+
+Test Scenario: Verify that user can add a product to cart after login.
+
+Precondition: User is logged in and is on the Home page.
+
+Test Steps:
+
+Search for a product.
+Select the product.
+Click Add to Cart.
+Open the Cart.
+
+Expected Result:
+Product should be added successfully to the cart.
+
+Test Case 3
+
+Test Case ID: TC003
+
+Test Scenario: Verify that maximum 10 items can be added to the cart.
+
+Precondition: User is on the Home page.
+
+Test Steps:
+
+Search for a product.
+Select the product.
+Click Add to Cart.
+Repeat the process until 10 items are added.
+
+Expected Result:
+User should be able to add maximum 10 items to the cart.
+
+Test Case 4
+
+Test Case ID: TC004
+
+Test Scenario: Verify that user cannot add more than 10 items.
+
+Precondition: Cart already contains 10 items.
+
+Test Steps:
+
+Search for another product.
+Select the product.
+Click Add to Cart.
+
+Expected Result:
+Product should not be added and "Cart is full" popup message should be displayed.
+
+Test Case 5
+
+Test Case ID: TC005
+
+Test Scenario: Verify Checkout button when cart is empty.
+
+Precondition: Cart is empty.
+
+Test Steps:
+
+Open the Cart page.
+Check the Checkout button.
+
+Expected Result:
+Checkout button should be disabled.
+
+Test Case 6
+
+Test Case ID: TC006
+
+Test Scenario: Verify empty cart message.
+
+Precondition: Cart is empty.
+
+Test Steps:
+
+Open the Cart page.
+
+Expected Result:
+Message "Your cart is empty, add items to checkout" should be displayed.
+
+Test Case 7
+
+Test Case ID: TC007
+
+Test Scenario: Verify checkout asks for login when user is not logged in.
+
+Precondition: Product is added to cart and user is not logged in.
+
+Test Steps:
+
+Open the Cart.
+Click Checkout.
+
+Expected Result:
+User should be redirected to the Login page.
+
+Test Case 8
+
+Test Case ID: TC008
+
+Test Scenario: Verify user can proceed to payment after login.
+
+Precondition: Product is added to cart and user is on the Login page.
+
+Test Steps:
+
+Enter valid username.
+Enter valid password.
+Click Login.
+Continue checkout.
+
+Expected Result:
+User should be redirected to the Payment page.
